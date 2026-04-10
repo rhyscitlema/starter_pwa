@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"page/home": [
+				"js/page/home.js"
+			],
+			"util/store": [
+				"js/util/store.js"
+			],
+			"spart/core": [
+				"spart/js/core.js"
+			],
+			"spart/fetch": [
+				"spart/js/fetch.js"
+			],
+			"spart/pages": [
+				"spart/js/pages.js"
+			],
+			"spart/i18n": [
+				"spart/js/i18n.js"
+			],
+			"spart/component": [
+				"spart/js/component.js"
+			],
+			"spart/navigator": [
+				"spart/js/navigator.js"
+			]
+		}
+	},
+	"include": [
+		"./**/*.js"
+	]
+}
