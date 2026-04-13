@@ -1,7 +1,7 @@
-import openPage from "spart/pages";
-import { setup, toast } from "spart/core";
-import { setupPageHeaderAndContent } from "spart/component";
-import { currentLanguage, changeLanguage } from "spart/i18n";
+import openPage from "spart/js/pages.js";
+import { setup, toast, updateElement } from "spart/js/core.js";
+import { getPageHeader } from "spart/js/component.js";
+import { currentLanguage, changeLanguage } from "spart/js/i18n.js";
 
 function openHomePage() {
 	const page = openPage("home", { level: 1 });
@@ -15,6 +15,7 @@ function openHomePage() {
 	}];
 
 	const titleElem = { tag: "span", html: document.title };
+	const headerDiv = getPageHeader(false, titleElem, undefined, menuOptions);
 
 	const content = [{
 		tag: "select",
@@ -31,7 +32,8 @@ function openHomePage() {
 		events: { click: () => toast("Hello World!") }
 	}];
 
-	setupPageHeaderAndContent(page, false, titleElem, undefined, menuOptions, content);
+	const contentDiv = { tag: "div", class: "page-content", content };
+	updateElement(page, { content: [headerDiv, contentDiv] });
 }
 
 // Initialize the chat application

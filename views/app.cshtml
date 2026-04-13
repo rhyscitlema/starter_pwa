@@ -31,45 +31,11 @@
 
 	<link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="/lib/bootstrap/bootstrap-icons.min.css">
-	<link rel="stylesheet" href="/spart/css/spart.css?v=1.0">
-	<link rel="stylesheet" href="/spart/css/component.css?v=1.0">
-	<link rel="stylesheet" href="/css/app.css?v=1.0">
-
 	<script defer src="/lib/bootstrap/bootstrap.bundle.min.js"></script>
-	<script defer src="/js/SVGs.js?v=1.0"></script>
 
-	<script type="importmap">
-	{
-		"imports": {
-			"spart/core": "/spart/js/core.js?v=1.0",
-			"spart/fetch": "/spart/js/fetch.js?v=1.0",
-			"spart/pages": "/spart/js/pages.js?v=1.0",
-			"spart/i18n": "/spart/js/i18n.js?v=1.0",
-			"spart/component": "/spart/js/component.js?v=1.0",
-			"spart/navigator": "/spart/js/navigator.js?v=1.0",
-
-			"page/home": "/js/page/home.js?v=1.0",
-			"util/store": "/js/util/store.js?v=1.0"
-		}
-	}
-	</script>
-
-	<script type="module">
-		import { initializeApp } from 'page/home';
-
-		await initializeApp({
-			isProgressiveWebApp: true,
-			i18nAssetsVersion: "1.0"
-		});
-
-		document.getElementById("app-loading-indicator").hidden = true;
-
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register("/sw.js")
-				.then(reg => console.debug("Ready!"))
-				.catch(err => console.error("SW registration failed:", err));
-		}
-	</script>
+	<link rel="stylesheet" href="/build/app.css?v=1.0">
+	<script defer src="/build/app.js?v=1.0"></script>
+	<script>var i18nAssetsVersion = "1.0";</script>
 </head>
 
 <body>
