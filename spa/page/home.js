@@ -1,5 +1,5 @@
 import toast from "spart/js/toast.js";
-import openPage from "spart/js/pages.js";
+import openPage from "spart/js/page.js";
 import { setup, updateElement } from "spart/js/core.js";
 import { getPageHeader } from "spart/js/component.js";
 import { currentLanguage, changeLanguage } from "spart/js/i18n.js";
