@@ -1,8 +1,5 @@
 {
-	"manifest_version": 3,
-	"version": "1.0.0",
-	"short_name": "Starter PWA",
-	"name": "Starter Progressive Web App",
+	"name": "Starter PWA",
 	"description": "A minimal starter template for future PWA projects using Spart.",
 	"start_url": "/app",
 	"id": "/?pwa=1",
