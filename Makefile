@@ -6,17 +6,18 @@ OBJECT_FILES := \
 	$(BUILDDIR)startup.o \
 	$(BUILDDIR)controllers/home.o
 
-SITE_NAME := starter_pwa
+MODULE_NAME := starter_pwa
 
 $(BUILDDIR):
 	mkdir -p $(BUILDDIR)controllers/
 
-PUBLISHED_ASSETS := public views .htaccess settings.json
+PUBLISHED_ASSETS := public views settings.json
 publish: publish-with-rsync
 
-include ../libweb/module.mk
+LOCALDIR ?= $(HOME)/.local/
+include $(LOCALDIR)/share/web/module.mk
 
-# Also compile the SPA bundle
+# Also bundle the SPA
 debug: spa_bundle
 release: spa_bundle
 

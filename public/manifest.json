@@ -1,6 +1,6 @@
 {
 	"name": "Starter PWA",
-	"description": "A minimal starter template for future PWA projects using Spart.",
+	"description": "A minimal starter template for future PWA development.",
 	"start_url": "/app",
 	"id": "/?pwa=1",
 	"display": "standalone",
