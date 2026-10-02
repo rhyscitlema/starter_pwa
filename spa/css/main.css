@@ -7,7 +7,7 @@ body {
 	margin: 0;
 }
 
-.spa-page[name="home"] {
+.spa-page[data-name="home"] {
 	display: flex;
 	flex-direction: column;
 }

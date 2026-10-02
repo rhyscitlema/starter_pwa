@@ -2,7 +2,7 @@
 
 static apr_status_t app_page(HttpContext *c)
 {
-	c->constants.layout_file = NO_LAYOUT_FILE;
+	c->path_info.layout_file = NO_LAYOUT_FILE;
 	set_page_title(c, "Starter PWA");
 	return process_view(c);
 }

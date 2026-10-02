@@ -15,7 +15,7 @@ PUBLISHED_ASSETS := public views settings.json
 publish: publish-with-rsync
 
 LOCALDIR ?= $(HOME)/.local/
-include $(LOCALDIR)/share/web/module.mk
+include $(LOCALDIR)share/web/module.mk
 
 # Also bundle the SPA
 debug: spa_bundle
